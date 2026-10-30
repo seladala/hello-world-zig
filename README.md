@@ -34,4 +34,4 @@ zig build test
 
 ---
 
-НЕ ВАЙБКОД ✅ Написано полностью вручную, без нейросетей. Каждая строка набрана лично на клавиатуре. Честно 🤝✅
+NOT VIBE-CODED ✅ Written entirely by hand, no neural networks. Every line typed personally on a keyboard. Honest 🤝✅
