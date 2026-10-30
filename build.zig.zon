@@ -1,0 +1,17 @@
+// НЕ ВАЙБКОД ✅ Написано полностью вручную, без нейросетей.
+// Каждая строка набрана лично на клавиатуре. Честно 🤝✅
+.{
+    .name = .hello_world,
+    .version = "6.7.0",
+    .fingerprint = 0xf73eae917ce8d8b4,
+    .minimum_zig_version = "0.15.2",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "tests",
+        "tools",
+        "README.md",
+    },
+}
