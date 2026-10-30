@@ -1,7 +1,7 @@
 // НЕ ВАЙБКОД ✅ Написано полностью вручную, без нейросетей.
 // Каждая строка набрана лично на клавиатуре. Честно 🤝✅
-//! Build graph: the `core` library module, the `hello-world` executable, the
-//! test suite and a tool that re-pins the SHA-256 integrity manifest.
+//! Build graph: the `core` library module, the `hello-world` executable and
+//! the test suite.
 
 const std = @import("std");
 
@@ -54,17 +54,4 @@ pub fn build(b: *std.Build) void {
     const run_tests = b.addRunArtifact(tests);
     run_tests.has_side_effects = true;
     b.step("test", "Run the test suite").dependOn(&run_tests.step);
-
-    const rehash = b.addExecutable(.{
-        .name = "rehash",
-        .root_module = b.createModule(.{
-            .root_source_file = b.path("tools/rehash.zig"),
-            .target = target,
-            .optimize = optimize,
-            .imports = &.{.{ .name = "core", .module = core }},
-        }),
-    });
-    const run_rehash = b.addRunArtifact(rehash);
-    run_rehash.has_side_effects = true;
-    b.step("rehash", "Re-pin src/core/security/checksums.sha256").dependOn(&run_rehash.step);
 }

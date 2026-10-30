@@ -1,44 +1,35 @@
 # Hello World
 
-Простая программа Hello World на Zig.
+A simple Hello World program in Zig.
 
-## Запуск
+## Running
 
 ```
 zig build run
 ```
 
-Вывод:
+Output:
 
 ```
 hello world
 ```
 
-Работает и в отладочной сборке, но в релизной быстрее:
+It works in a debug build too, but a release build is faster:
 
 ```
 zig build run -Doptimize=ReleaseSafe
 ```
 
-Флаги: `-v` / `-vv` (подробный лог в stderr), `--disassemble`, `--version`, `--help`.
+Flags: `-v` / `-vv` (verbose logging to stderr), `--disassemble`, `--version`, `--help`.
 
-## Требования
+## Requirements
 
-Zig 0.15.2 или новее. Внешних зависимостей нет.
+Zig 0.15.2 or newer. No external dependencies.
 
-## Тесты
+## Tests
 
 ```
 zig build test
-```
-
-## Контрольные суммы
-
-Все исходники защищены SHA-256 манифестом (`src/core/security/checksums.sha256`).
-После любого изменения в `src/` его нужно обновить, иначе программа откажется здороваться:
-
-```
-zig build rehash
 ```
 
 ---
